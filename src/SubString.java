@@ -32,13 +32,13 @@ public class SubString {
 
     }
 
-    public boolean allUnique(String s ,int start ,int end){
+    public boolean allUnique(String s ,int start ,int end){//判断指定字符字串是否不含有重复字符
 
         Set<Character> set;
         set = new HashSet<Character>();
         for(int i =start;i<end;i++){
-            Character ch = s.charAt(i);
-            if(set.contains(ch)) return false;
+            Character ch = s.charAt(i);         //check firstly whether current char is already in the string ,
+            if(set.contains(ch)) return false;  //if not,secondly add this char into string
             set.add(ch);
         }
         return true;
